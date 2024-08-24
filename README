@@ -1,0 +1,8 @@
+	Fisierele "coada.h", "functii.h" si "stiva.h" contin structurile si functiile pentru coada(memorarea operatiilor), banda(banda modificata de functii) si stiva(pt undo si redo). Numele acestor functii sunt intuitive.
+	De mentionat faptul ca toate functiile pentru banda care se retin in coada au o codificare de la 1 la 12(vezi in tema1.c funcita "add"), asadar in coada voi retine codificarea respectiva si caracterul care tine de functia respectiva(pentru cele care nu au nevoie voi folosi caracterul "|" avand in vedere ca nu se va mai intalni).
+	Stivele pentru undo si redo retin degetul bandei. 
+	In main declar banda si fisierele din care citesc si in care scriu. Voi initializa coada(queue)	cu un camp nefolositor(pe care il ignor in tot programul), realizez citirea din fisier si memorarea comenzilor in coada. Urmeaza o parcurgere a cozii cu doi pointeri, unul care cauta EXECUTE/UNDO/REDO/SHOW/SHOW_CURRENT si altul pentru o comanda executabila, iar cand citesc comanda EXECUTE o voi rula pe aceasta. In urma rularii unei comenzi aferente comezii de undo voi introduce in stiva de undo degetul curent al benzii. Cand gasesc comanda UNDO, retin degetul curent in stiva pentru redo si ma intorc la degetul din stiva undo.
+In cazul REDO ma intorc la degetul din stiva redo.
+	In final programul inchide cele doua fisiere si elibereaza memoria.
+	
+
